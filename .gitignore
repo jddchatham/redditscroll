@@ -1,0 +1,4 @@
+/build/
+/app/
+/debug.keystore
+*.log
