@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>RedditScroll</title>
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+  <div id="topbar">
+    <div id="cat-row" class="row scroll-row"></div>
+    <div class="row">
+      <div id="sort-hot" class="pill">HOT</div>
+      <div id="sort-new" class="pill">NEW</div>
+      <div id="sort-top" class="pill">TOP</div>
+      <div id="sort-rnd" class="pill">RND</div>
+      <div class="spacer"></div>
+      <div id="refresh" class="pill icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+      <div id="search-toggle" class="pill icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+    </div>
+    <div id="search-expanded" class="row hidden">
+      <input id="search-input" type="text" placeholder="Search…" autocomplete="off">
+      <div id="search-go" class="pill active">GO</div>
+      <div id="search-clear" class="pill">✕</div>
+    </div>
+    <div id="match-info"></div>
+  </div>
+
+  <div id="pager"></div>
+
+  <div id="scroll-arrows">
+    <button id="scroll-up" class="arrow-btn" aria-label="Previous post">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M12 4l-8 8h16z"/></svg>
+    </button>
+    <button id="scroll-down" class="arrow-btn" aria-label="Next post">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M12 20l8-8H4z"/></svg>
+    </button>
+  </div>
+
+  <div id="offline">OFFLINE · SHOWING CACHED</div>
+  <div id="loading">LOADING…</div>
+
+  <div id="error" class="hidden">
+    <div class="error-title">Can’t reach Reddit</div>
+    <div class="error-subtitle">Check your connection and try again.</div>
+    <button id="error-btn">RETRY</button>
+  </div>
+
+  <div id="hint" class="hidden">Swipe up for the next post ↑ — pick a subreddit above</div>
+
+  <script src="app.js?v=1"></script>
+</body>
+</html>

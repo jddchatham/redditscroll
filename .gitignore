@@ -2,3 +2,5 @@
 /app/
 /debug.keystore
 *.log
+__pycache__/
+*.pyc
